@@ -23,7 +23,7 @@ cognitoidentityserviceprovider.getUser(params, function(err, data) {
     if (err) 
     {
         // Change - Link to the Home Page
-        window.location.href = 'https://rushidonga.github.io/cognito-auth/'
+        window.location.href = 'https://afkhan2021.github.io/cognito-auth/'
     }
     else 
     {
