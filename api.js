@@ -8,7 +8,7 @@ var sendData = (userName,email, subject, description)=>{
 
     fetch(
         // Change - Your API here
-        'https://puhrkwcjc1.execute-api.us-east-1.amazonaws.com/test/test', 
+        'https://t6wzlj31f6.execute-api.us-east-1.amazonaws.com/test/test', 
         {
             method: "POST", 
             body: JSON.stringify({
