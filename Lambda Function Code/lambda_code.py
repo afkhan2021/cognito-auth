@@ -30,7 +30,7 @@ def lambda_handler(event, context):
 # Publish a message to SNS
 def handle_sns(id, event):
     sns_message = """
-        You got a new Message from https://rushidonga.github.io/cognito-auth/
+        You got a new Message from https://afkhan2021.github.io/cognito-auth/
         The message is as follows
         
         id      : {id}
@@ -49,7 +49,7 @@ def handle_sns(id, event):
     client_sns.publish(
 
         # Change - the ARN to the ARN of your SNS
-        TopicArn='arn:aws:sns:ap-south-1:937726284102:Get-in-touch-SNS',
+        TopicArn='arn:aws:sns:us-east-1:056283020027:test:d5d01ed2-8d81-4426-9313-5dff9e73535e',
         Message= sns_message,
         Subject= event['subject']
     )
