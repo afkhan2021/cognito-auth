@@ -6,13 +6,14 @@ import uuid
 dynamodb = boto3.resource('dynamodb')
 
 # Change - the name of the DynamoDB table
-table = dynamodb.Table('get-in-touch-table')
+table = dynamodb.Table('test')
 
 # Create an SNS Client
 client_sns = boto3.client('sns')
 
 # This function will be triggered by API Gateway
 def lambda_handler(event, context):
+    print(event) 
 
     # Create a user ID
     id = str(uuid.uuid4())
@@ -49,7 +50,7 @@ def handle_sns(id, event):
     client_sns.publish(
 
         # Change - the ARN to the ARN of your SNS
-        TopicArn='arn:aws:sns:us-east-1:056283020027:test:d5d01ed2-8d81-4426-9313-5dff9e73535e',
+        TopicArn='arn:aws:sns:us-east-1:056283020027:test',
         Message= sns_message,
         Subject= event['subject']
     )
